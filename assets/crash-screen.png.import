@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx7kqyl61f4e"
-path="res://.godot/imported/crash-screen.jpg-01bbb1d1b4559a3f8ddc593ed00d13f7.ctex"
+uid="uid://b4caf0j03ldl7"
+path="res://.godot/imported/crash-screen.png-579dcac73073ea946181ce60b71e4e3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crash-screen.jpg"
-dest_files=["res://.godot/imported/crash-screen.jpg-01bbb1d1b4559a3f8ddc593ed00d13f7.ctex"]
+source_file="res://assets/crash-screen.png"
+dest_files=["res://.godot/imported/crash-screen.png-579dcac73073ea946181ce60b71e4e3e.ctex"]
 
 [params]
 
