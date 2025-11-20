@@ -1,18 +1,21 @@
 extends Node2D
 const clankerAd = preload("res://scenes/ClankerAd.tscn")
 var probability = 1
+var adCount = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	var lucky = randf_range(0, 1000)
-	if (lucky < probability):
-		spawnAd()
-	probability += 0.01
+	if (adCount < 5):
+		if (lucky < probability):
+			spawnAd()
+		probability += 0.01
+	else:
+		$crashScreen.visible = true
 
 func spawnAd() -> void:
 	var newAd = clankerAd.instantiate()
@@ -28,3 +31,8 @@ func spawnAd() -> void:
 	
 	newAd.position = Vector2(randomX, randomY)
 	add_child(newAd)
+	newAd.adDeleted.connect(deleteAd)
+	adCount += 1
+	
+func deleteAd() -> void:
+	adCount -= 1

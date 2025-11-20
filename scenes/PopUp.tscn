@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bk3plt4gruvxh"]
+[gd_scene load_steps=5 format=3 uid="uid://bk3plt4gruvxh"]
 
 [ext_resource type="Texture2D" uid="uid://b7hhii6260ji4" path="res://assets/windows-bg.jpg" id="1_i1ni8"]
 [ext_resource type="Script" uid="uid://edwdnyo1461g" path="res://scripts/pop_up.gd" id="1_mugek"]
+[ext_resource type="Texture2D" uid="uid://dx7kqyl61f4e" path="res://assets/crash-screen.jpg" id="3_dfdmi"]
 [ext_resource type="PackedScene" uid="uid://1l6vx4juq37i" path="res://scenes/ClankerAd.tscn" id="3_mth2m"]
 
 [node name="Node2D" type="Node2D"]
@@ -14,3 +15,10 @@ texture = ExtResource("1_i1ni8")
 
 [node name="Sprite2D" parent="." instance=ExtResource("3_mth2m")]
 position = Vector2(-142.99998, 287)
+
+[node name="crashScreen" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(575.3334, 322.25)
+scale = Vector2(0.59965277, 0.5995371)
+texture = ExtResource("3_dfdmi")
