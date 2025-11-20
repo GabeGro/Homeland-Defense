@@ -14,4 +14,3 @@ texture = ExtResource("1_i1ni8")
 
 [node name="Sprite2D" parent="." instance=ExtResource("3_mth2m")]
 position = Vector2(-142.99998, 287)
-scale = Vector2(0.47265625, 0.47656244)
