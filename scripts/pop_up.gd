@@ -12,7 +12,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if (malware == true):
 		$crashScreen.visible = true
-	elif (adCount < 5):
+	elif (adCount < 30):
 		var lucky = randf_range(0, 1000)
 		if (lucky < probability):
 			spawnAd()
