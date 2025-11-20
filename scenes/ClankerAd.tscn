@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://1l6vx4juq37i"]
+
+[ext_resource type="Texture2D" uid="uid://ca0kyvb5kqhea" path="res://assets/clanker-ad.png" id="1_cphsq"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.47265625, 0.47265625)
+texture = ExtResource("1_cphsq")
