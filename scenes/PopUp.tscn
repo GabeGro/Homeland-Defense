@@ -14,6 +14,7 @@ scale = Vector2(0.3006944, 0.3006944)
 texture = ExtResource("1_i1ni8")
 
 [node name="Sprite2D" parent="." instance=ExtResource("3_mth2m")]
+visible = false
 position = Vector2(-142.99998, 287)
 
 [node name="crashScreen" type="Sprite2D" parent="."]
