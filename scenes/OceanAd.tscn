@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://0meabi8klry0"]
+
+[ext_resource type="Texture2D" uid="uid://c564kjc07b25o" path="res://assets/ocean-ad.png" id="1_a38g1"]
+[ext_resource type="Script" uid="uid://bnn48y81crq1r" path="res://scripts/clanker_ad.gd" id="2_6s2jp"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(83, 308.00003)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_a38g1")
+script = ExtResource("2_6s2jp")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.92200005
+anchor_top = 0.004
+anchor_right = 1.0
+anchor_bottom = 0.058000002
+offset_left = -221.27844
+offset_top = -774.156
+offset_right = -206.28403
+offset_bottom = -810.40375
+
+[node name="LinkButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.049000002
+anchor_top = 0.054
+anchor_right = 0.16100001
+anchor_bottom = 0.054
+offset_left = -212.66792
+offset_top = -371.74774
+offset_right = 128.47363
+offset_bottom = 96.72865
+
+[connection signal="pressed" from="ExitButton" to="." method="buttonPressed"]
+[connection signal="pressed" from="LinkButton" to="." method="linkPressed"]
