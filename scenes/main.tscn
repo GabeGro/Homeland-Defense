@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6uy0gep2p7o"]
+
+[ext_resource type="Script" uid="uid://bbt7i4rley3qg" path="res://scenes/main.gd" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://d3i6404agcffi" path="res://scenes/bug.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dpq65xgf4b02r" path="res://scenes/enemy.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://dlembpmgladcc" path="res://scenes/goal_area.gd" id="3_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(1152, 65)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jyhfs")
+
+[node name="Bug" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(401, 550)
+
+[node name="Enemy" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(639, 335)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(639, 284)
+speed = 150.0
+
+[node name="Enemy3" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(640, 233)
+
+[node name="FirewallBar" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 66.0
+color = Color(1, 0, 0, 1)
+
+[node name="GoalHole" type="ColorRect" parent="FirewallBar"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 65.0
+color = Color(0.15965632, 0.089161195, 0.026974604, 1)
+
+[node name="GoalArea" type="Area2D" parent="."]
+position = Vector2(400, 20)
+script = ExtResource("3_sugp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalArea"]
+position = Vector2(176, 12.5)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[connection signal="body_entered" from="Enemy2" to="." method="_on_enemy_body_entered"]
+[connection signal="body_entered" from="Enemy3" to="." method="_on_enemy_body_entered"]
+[connection signal="body_entered" from="GoalArea" to="." method="_on_goal_area_body_entered"]
