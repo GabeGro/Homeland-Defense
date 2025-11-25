@@ -26,10 +26,10 @@ anchor_left = 0.049000002
 anchor_top = 0.054
 anchor_right = 0.16100001
 anchor_bottom = 0.054
-offset_left = -275.42688
-offset_top = 271.40137
-offset_right = -131.45546
-offset_bottom = 311.40137
+offset_left = -243.69136
+offset_top = -386.58206
+offset_right = 135.34705
+offset_bottom = 345.2526
 
 [connection signal="pressed" from="ExitButton" to="." method="buttonPressed"]
 [connection signal="pressed" from="LinkButton" to="." method="linkPressed"]
