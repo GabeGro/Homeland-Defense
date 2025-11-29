@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cclfl2xyak3wf"]
+
+[ext_resource type="Script" uid="uid://c3e8fmic4ms1g" path="res://scripts/desktop.gd" id="1_06q4v"]
+[ext_resource type="Texture2D" uid="uid://b7hhii6260ji4" path="res://assets/windows-bg.jpg" id="1_rmtxi"]
+[ext_resource type="Texture2D" uid="uid://2jqrgbicr3qh" path="res://assets/icon-secrets.png" id="2_13veq"]
+[ext_resource type="PackedScene" uid="uid://d3qpi0liqn5xm" path="res://scenes/desktop/folder-secrets.tscn" id="3_13veq"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_06q4v")
+
+[node name="WindowsBg" type="Sprite2D" parent="."]
+position = Vector2(1153.0557, 650)
+scale = Vector2(0.6041378, 0.6166667)
+texture = ExtResource("1_rmtxi")
+
+[node name="SecretsButton" type="TextureButton" parent="."]
+offset_left = 72.0
+offset_top = 1011.0
+offset_right = 242.0
+offset_bottom = 1211.6161
+texture_normal = ExtResource("2_13veq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SecretsFolder" parent="." instance=ExtResource("3_13veq")]
+visible = false
+position = Vector2(1164, 624)
+
+[connection signal="pressed" from="SecretsButton" to="." method="secretsPressed"]
