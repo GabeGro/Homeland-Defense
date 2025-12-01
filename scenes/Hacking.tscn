@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://c6jlq0iptftw1"]
 
 [node name="Node2D" type="Node2D"]
+[gd_scene load_steps=3 format=3 uid="uid://bujwi31rv2shv"]
+
+[ext_resource type="Script" uid="uid://dn7xdsa35in7p" path="res://scripts/hacking.gd" id="1_d7ypa"]
+[ext_resource type="Texture2D" uid="uid://g52eakdp0ivx" path="res://assets/hacking-bg.jpg" id="1_frw7p"]
+
+[node name="HackingRacer" type="Node2D"]
+script = ExtResource("1_d7ypa")
+
+[node name="HackingBg" type="Sprite2D" parent="."]
+position = Vector2(575, 323.75)
+scale = Vector2(0.30677083, 0.31597224)
+texture = ExtResource("1_frw7p")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 288.0
+offset_top = 155.0
+offset_right = 1015.0
+offset_bottom = 516.0
+bbcode_enabled = true
+text = "hello"

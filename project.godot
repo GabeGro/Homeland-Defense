@@ -11,15 +11,9 @@ config_version=5
 [application]
 
 config/name="Homeland Defense"
-run/main_scene="uid://bk3plt4gruvxh"
+run/main_scene="uid://bujwi31rv2shv"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=2304
-window/size/viewport_height=1296
-window/stretch/scale=2.0
 
 [rendering]
 
