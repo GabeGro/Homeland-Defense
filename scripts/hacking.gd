@@ -28,30 +28,4 @@ func generateString(length: int) -> String:
 func updateVisuals() -> void:
 	var typed = targetString.substr(0, currCharIndex)
 	var untyped = targetString.substr(currCharIndex)
-	label.text = "[center][color=#00ff00]%s[/color][color=#ffffff]%s[/color][/center]" % [typed, untyped]
-	
-func inputHandler(event):
-	# We only care about keyboard key presses that are actual characters
-	if event is InputEventKey and event.pressed and not event.echo:
-		var typedChar = char(event.unicode) # Convert keycode to string character
-		
-		# Ensure the typed character matches the target
-		if currCharIndex < targetString.length():
-			var expectedChar = targetString[currCharIndex]
-			
-			if typedChar == expectedChar:
-				correctKey()
-			else:
-				wrongKey()
-				
-func correctKey():
-	currCharIndex += 1
-	updateVisuals()
-	
-	# Check Win Condition
-	if currCharIndex >= targetString.length():
-		print("win!")
-
-func wrongKey():
-	# Optional: Add sound effect or screen shake here
-	print("Wrong key!")
+	label.text = typed + untyped
