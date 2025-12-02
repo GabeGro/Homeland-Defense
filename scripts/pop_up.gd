@@ -13,6 +13,7 @@ var malware = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#print("hello")
 	randomize()
 	pass # Replace with function body.
 
@@ -24,7 +25,7 @@ func _process(_delta: float) -> void:
 		var lucky = randf_range(0, 1000)
 		if (lucky < probability):
 			spawnAd()
-		probability += 0.01
+		probability += 0.001
 	else:
 		$crashScreen.visible = true
 

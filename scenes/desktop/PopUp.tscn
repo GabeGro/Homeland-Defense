@@ -10,19 +10,21 @@
 [ext_resource type="PackedScene" uid="uid://bcsc75u1wa1rp" path="res://scenes/ArtistAd.tscn" id="8_utfft"]
 
 [node name="Node2D" type="Node2D"]
+z_index = 1
 script = ExtResource("1_mugek")
 
 [node name="windowsBG" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(575.3334, 322.25)
 scale = Vector2(0.3006944, 0.3006944)
 texture = ExtResource("1_i1ni8")
 
 [node name="ClankerAd" parent="." instance=ExtResource("3_mth2m")]
-position = Vector2(-142.99998, 287)
+position = Vector2(-142.99994, 222.00002)
 
 [node name="crashScreen" type="Sprite2D" parent="."]
 visible = false
-top_level = true
+z_index = 2
 position = Vector2(577.76556, 325.50003)
 scale = Vector2(1.2066007, 1.2129629)
 texture = ExtResource("4_iexew")

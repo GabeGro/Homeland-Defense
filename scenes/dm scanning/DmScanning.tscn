@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dswfhmgxjra8a" path="res://scripts/dm_scanning.gd" id="1_mqimm"]
 [ext_resource type="Texture2D" uid="uid://b7hhii6260ji4" path="res://assets/windows-bg.jpg" id="2_to3ka"]
-[ext_resource type="PackedScene" uid="uid://dkdrm4nc27s6t" path="res://scenes/DM1.tscn" id="2_xy5gx"]
-[ext_resource type="PackedScene" uid="uid://dlvuw2er386fu" path="res://scenes/DM2.tscn" id="3_hgr61"]
+[ext_resource type="PackedScene" uid="uid://dkdrm4nc27s6t" path="res://scenes/dm scanning/DM1.tscn" id="2_xy5gx"]
+[ext_resource type="PackedScene" uid="uid://dlvuw2er386fu" path="res://scenes/dm scanning/DM2.tscn" id="3_hgr61"]
 [ext_resource type="Texture2D" uid="uid://b4caf0j03ldl7" path="res://assets/crash-screen.png" id="5_to3ka"]
 
 [node name="Node2D" type="Node2D"]
