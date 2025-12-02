@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb7xxhw2sewbh"
-path="res://.godot/imported/destruct-ad.png-e43dc0904558df901ad730014e09b054.ctex"
+uid="uid://cci5n35b1bjs0"
+path="res://.godot/imported/selfdestruct-ad.png-1733234af220b90e853fbaaa7b8b6ad9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/destruct-ad.png"
-dest_files=["res://.godot/imported/destruct-ad.png-e43dc0904558df901ad730014e09b054.ctex"]
+source_file="res://assets/selfdestruct-ad.png"
+dest_files=["res://.godot/imported/selfdestruct-ad.png-1733234af220b90e853fbaaa7b8b6ad9.ctex"]
 
 [params]
 
