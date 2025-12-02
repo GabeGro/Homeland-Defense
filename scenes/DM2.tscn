@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlvuw2er386fu"]
+
+[ext_resource type="Script" uid="uid://b2blc43yajmse" path="res://scripts/dm_2.gd" id="1_6xn65"]
+[ext_resource type="Texture2D" uid="uid://cb00i7m7v15p1" path="res://assets/check.png" id="2_hmvtg"]
+[ext_resource type="Texture2D" uid="uid://b0d5o1t4tt7ic" path="res://assets/cross.png" id="3_eflv5"]
+[ext_resource type="Texture2D" uid="uid://5pybrfbogbd6" path="res://assets/DM2.png" id="4_6xn65"]
+
+[node name="Dm2" type="Node2D"]
+script = ExtResource("1_6xn65")
+
+[node name="Yes Button" type="TextureButton" parent="."]
+offset_left = 472.0
+offset_top = 24.0
+offset_right = 973.0
+offset_bottom = 524.0
+scale = Vector2(0.255, 0.255)
+texture_normal = ExtResource("2_hmvtg")
+stretch_mode = 0
+
+[node name="No Button" type="TextureButton" parent="."]
+offset_left = 472.00003
+offset_top = 232.00002
+offset_right = 1372.0
+offset_bottom = 1132.0
+scale = Vector2(0.142, 0.142)
+texture_normal = ExtResource("3_eflv5")
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(224, 192)
+scale = Vector2(0.8257115, 0.8257115)
+texture = ExtResource("4_6xn65")
