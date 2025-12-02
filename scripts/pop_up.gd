@@ -29,7 +29,6 @@ func _process(_delta: float) -> void:
 	else:
 		$crashScreen.visible = true
 
-
 func spawnAd() -> void:
 	#create new instance of ad
 	# Pick a random ad scene from the array

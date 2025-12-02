@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1o7woblhf7vd"]
+
+[ext_resource type="Texture2D" uid="uid://byngv6iw0din7" path="res://assets/menu-screen.png" id="1_4vrcr"]
+[ext_resource type="Script" uid="uid://bkj0srn5rsk3k" path="res://scripts/start_screen.gd" id="1_pswtb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pswtb")
+
+[node name="MenuScreen" type="Sprite2D" parent="."]
+position = Vector2(581, 332.00003)
+scale = Vector2(0.8131612, 0.8300249)
+texture = ExtResource("1_4vrcr")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 473.0
+offset_top = 383.0
+offset_right = 697.7407
+offset_bottom = 506.0
+theme_override_font_sizes/font_size = 38
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="playPressed"]

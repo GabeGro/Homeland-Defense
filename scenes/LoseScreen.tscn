@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drimgifv4bxnw"]
+
+[ext_resource type="Texture2D" uid="uid://c438p3uegl7v1" path="res://assets/fail-screen.png" id="1_5ma5d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="LoseScreen" type="Sprite2D" parent="."]
+position = Vector2(581, 332.00003)
+scale = Vector2(0.8131612, 0.8300249)
+texture = ExtResource("1_5ma5d")
