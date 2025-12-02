@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb7xxhw2sewbh"
-path="res://.godot/imported/destruct-ad.png-e43dc0904558df901ad730014e09b054.ctex"
+uid="uid://c5l0vwe8t0e7e"
+path="res://.godot/imported/brain-ad.png-0fe75e469bf46dc79e7f4cd00aab1af9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/destruct-ad.png"
-dest_files=["res://.godot/imported/destruct-ad.png-e43dc0904558df901ad730014e09b054.ctex"]
+source_file="res://assets/brain-ad.png"
+dest_files=["res://.godot/imported/brain-ad.png-0fe75e469bf46dc79e7f4cd00aab1af9.ctex"]
 
 [params]
 

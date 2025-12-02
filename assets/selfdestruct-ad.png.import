@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx7kqyl61f4e"
-path="res://.godot/imported/crash-screen.jpg-01bbb1d1b4559a3f8ddc593ed00d13f7.ctex"
+uid="uid://cci5n35b1bjs0"
+path="res://.godot/imported/selfdestruct-ad.png-1733234af220b90e853fbaaa7b8b6ad9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crash-screen.jpg"
-dest_files=["res://.godot/imported/crash-screen.jpg-01bbb1d1b4559a3f8ddc593ed00d13f7.ctex"]
+source_file="res://assets/selfdestruct-ad.png"
+dest_files=["res://.godot/imported/selfdestruct-ad.png-1733234af220b90e853fbaaa7b8b6ad9.ctex"]
 
 [params]
 
