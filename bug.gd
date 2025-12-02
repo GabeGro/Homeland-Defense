@@ -1,37 +1,35 @@
 extends CharacterBody2D
 
-@export var step: Vector2 = Vector2(32, 32)   # how far each tap moves the target
-@export var move_speed: float = 500.0         # how fast we glide toward the target
+@export var move_speed: float = 300.0   # speed of movement (hold to move)
+@export var friction: float = 8.0       # smooth slowdown when you stop
 
-var target_position: Vector2
-
-
-func _ready() -> void:
-	# Start with target equal to current position
-	target_position = global_position
+var velocity_vector: Vector2 = Vector2.ZERO
 
 
 func _physics_process(delta: float) -> void:
-	var dir := Vector2.ZERO
+	var input_vector := Vector2.ZERO
 
-	# You can tap quickly; each tap nudges the target a bit
-	if Input.is_action_just_pressed("ui_up"):
-		dir.y = -1
-	elif Input.is_action_just_pressed("ui_down"):
-		dir.y = 1
-	elif Input.is_action_just_pressed("ui_left"):
-		dir.x = -1
-	elif Input.is_action_just_pressed("ui_right"):
-		dir.x = 1
+	# HOLD movement instead of tap movement
+	if Input.is_action_pressed("ui_up"):
+		input_vector.y -= 1
+	if Input.is_action_pressed("ui_down"):
+		input_vector.y += 1
+	if Input.is_action_pressed("ui_left"):
+		input_vector.x -= 1
+	if Input.is_action_pressed("ui_right"):
+		input_vector.x += 1
 
-	if dir != Vector2.ZERO:
-		# Move the *target* in smaller portions
-		target_position += dir * step
+	# Normalize diagonal movement
+	if input_vector != Vector2.ZERO:
+		input_vector = input_vector.normalized()
 
-	# Smoothly glide toward the target every frame
-	global_position = global_position.move_toward(target_position, move_speed * delta)
+	# Smooth acceleration / deceleration
+	velocity_vector = velocity_vector.move_toward(input_vector * move_speed, friction * move_speed * delta)
+
+	# Apply movement
+	global_position += velocity_vector * delta
 
 
 func reset_movement() -> void:
-	# Called when we respawn so we don't glide toward an old target
-	target_position = global_position
+	# Reset movement cleanly when colliding / resetting
+	velocity_vector = Vector2.ZERO

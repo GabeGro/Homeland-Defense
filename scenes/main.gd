@@ -3,8 +3,11 @@ extends Node2D
 @onready var EnemyScene: PackedScene = preload("res://scenes/enemy.tscn")  # adjust if your path is different
 @onready var Bug: CharacterBody2D = $Bug
 @onready var GoalArea: Area2D = $GoalArea
-@onready var FirewallBar: ColorRect = $FirewallBar
+@onready var FirewallBar: TextureRect = $FirewallBar
 @onready var GoalHoleVisual: ColorRect = $FirewallBar/GoalHole
+@onready var Barrier1Hole: ColorRect = $Barrier1/Bar1Hole
+@onready var Barrier2Hole: ColorRect = $Barrier2/Bar2Hole
+@onready var Barrier3Hole: ColorRect = $Barrier3/Bar3Hole
 
 var BUG_START_POS: Vector2
 
@@ -30,17 +33,32 @@ func reset_bug() -> void:
 func _process(delta: float) -> void:
 	move_hole(delta)
 
+func _bug_is_inside_hole(hole_rect: ColorRect) -> bool:
+	var bug_x: float = Bug.global_position.x
+
+	# For ColorRect / Control, global_position is TOP-LEFT
+	var hole_left: float = hole_rect.global_position.x
+	var hole_right: float = hole_left + hole_rect.size.x
+
+	return bug_x >= hole_left and bug_x <= hole_right
+
+func _handle_barrier_hit(body: Node2D, hole_rect: ColorRect) -> void:
+	if body != Bug:
+		return
+
+	if _bug_is_inside_hole(hole_rect):
+		print("Passed barrier safely")
+	else:
+		print("Hit solid barrier, reset.")
+		reset_bug()
+
+
 
 func _on_goal_area_body_entered(body: Node) -> void:
 	if body != Bug:
 		return
 
-	var bug_x: float = Bug.global_position.x
-
-	var hole_center_x: float = GoalHoleVisual.global_position.x
-	var hole_half_width: float = GoalHoleVisual.size.x / 2.0
-
-	if abs(bug_x - hole_center_x) <= hole_half_width:
+	if _bug_is_inside_hole(GoalHoleVisual):
 		print("You squeezed through the hole! WIN")
 		get_tree().call_deferred(
 			"change_scene_to_file",
@@ -49,6 +67,7 @@ func _on_goal_area_body_entered(body: Node) -> void:
 	else:
 		print("Hit solid firewall, reset.")
 		reset_bug()
+
 
 
 
@@ -107,3 +126,15 @@ func move_hole(delta: float) -> void:
 		hole_direction = -1
 
 	GoalHoleVisual.position = pos
+
+
+func _on_barrier1_body_entered(body: Node2D) -> void:
+	_handle_barrier_hit(body, Barrier1Hole)
+
+
+func _on_barrier2_body_entered(body: Node2D) -> void:
+	_handle_barrier_hit(body, Barrier2Hole)
+
+
+func _on_barrier3_body_entered(body: Node2D) -> void:
+	_handle_barrier_hit(body, Barrier3Hole)
