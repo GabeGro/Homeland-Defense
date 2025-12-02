@@ -10,6 +10,7 @@ func _ready() -> void:
 func passwordSubmitted(newText: String) -> void:
 	if newText == password:
 		print("Nice")
+		get_tree().change_scene_to_file("res://scenes/DmScanning.tscn")
 	else:
 		print("poop")
 
