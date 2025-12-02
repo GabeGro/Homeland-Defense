@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcsc75u1wa1rp"]
+
+[ext_resource type="Texture2D" uid="uid://dfjtsonokw4t3" path="res://assets/artist-ad.png" id="1_e85go"]
+[ext_resource type="Script" uid="uid://bnn48y81crq1r" path="res://scripts/clanker_ad.gd" id="2_ewh3j"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(82, 305)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_e85go")
+script = ExtResource("2_ewh3j")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.93200004
+anchor_top = 0.017
+anchor_right = 0.9850001
+anchor_bottom = 0.068
+offset_left = -225.38843
+offset_top = -787.75543
+offset_right = -199.67145
+offset_bottom = -812.9794
+
+[node name="LinkButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.049000002
+anchor_top = 0.054
+anchor_right = 0.16100001
+anchor_bottom = 0.054
+offset_left = -185.139
+offset_top = -747.296
+offset_right = 96.328964
+offset_bottom = 620.204
+
+[connection signal="pressed" from="ExitButton" to="." method="buttonPressed"]
+[connection signal="pressed" from="LinkButton" to="." method="linkPressed"]
