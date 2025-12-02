@@ -1,7 +1,5 @@
 extends Sprite2D
-signal secretExitClicked
-signal passwordClicked
-signal dataClicked
+signal passwordExitClicked
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,11 +9,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+
 func exitPressed() -> void:
-	secretExitClicked.emit()
-
-func passwordPressed() -> void:
-	passwordClicked.emit()
-
-func dataPressed() -> void:
-	dataClicked.emit() # Replace with function body.
+	passwordExitClicked.emit() # Replace with function body.

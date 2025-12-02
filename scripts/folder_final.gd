@@ -1,21 +1,15 @@
 extends Sprite2D
-signal secretExitClicked
-signal passwordClicked
-signal dataClicked
+signal finalExitClicked
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 
-func exitPressed() -> void:
-	secretExitClicked.emit()
 
-func passwordPressed() -> void:
-	passwordClicked.emit()
-
-func dataPressed() -> void:
-	dataClicked.emit() # Replace with function body.
+func exitClicked() -> void:
+	finalExitClicked.emit() # Replace with function body.

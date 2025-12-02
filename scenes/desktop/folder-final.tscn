@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtlyp86er7w7k"]
+
+[ext_resource type="Texture2D" uid="uid://b0acbkag3huhe" path="res://assets/desktop/folder-final.png" id="1_clarp"]
+[ext_resource type="Script" uid="uid://bm0mwn3cff80a" path="res://scripts/folder_final.gd" id="2_cy1j4"]
+
+[node name="FinalFolder" type="Sprite2D"]
+texture = ExtResource("1_clarp")
+script = ExtResource("2_cy1j4")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+offset_left = 521.0
+offset_top = -459.0
+offset_right = 561.0
+offset_bottom = -419.0
+
+[connection signal="pressed" from="ExitButton" to="." method="exitClicked"]
