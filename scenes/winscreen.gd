@@ -1,6 +1,6 @@
 extends Control
 
-@export var main_scene_path: String = "res://scenes/main.tscn"  # adjust if your main scene is elsewhere
+@export var main_scene_path: String = "res://scenes/desktop/desktop.tscn"  # adjust if your main scene is elsewhere
 
 func _ready() -> void:
 	# You can also set focus on the button if you like:

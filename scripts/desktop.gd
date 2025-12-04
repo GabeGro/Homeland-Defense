@@ -1,5 +1,6 @@
 extends Node2D
-
+const PopUpScene := preload("res://scenes/desktop/PopUp.tscn")
+var popup
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$SecretsFolder.secretExitClicked.connect(onSecretExitClicked)
@@ -9,6 +10,13 @@ func _ready() -> void:
 	$SecretNotepad.passwordExitClicked.connect(onPassExitClicked)
 	$PasswordPrompt.promptExitClicked.connect(onPromptExitClicked)
 	$SecretsFolder.dataClicked.connect(dataPressed)
+
+	# Create an instance of PopUp.tscn and add it to the Desktop scene
+	popup = PopUpScene.instantiate()
+	add_child(popup)
+
+	# Turn on ads only now that we're in the Desktop
+	popup.ads_enabled = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

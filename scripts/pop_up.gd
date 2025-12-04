@@ -10,7 +10,7 @@ const adScenes = [
 var probability = 1
 var adCount = 0
 var malware = false
-
+var ads_enabled: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#print("hello")
@@ -19,6 +19,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if ads_enabled == false:
+		return
+
 	if (malware == true):
 		$crashScreen.visible = true
 	elif (adCount < 30):

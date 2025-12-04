@@ -12,4 +12,4 @@ func _process(_delta: float) -> void:
 
 
 func playPressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/desktop/desktop.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/main.tscn") # Replace with function body.
