@@ -4,13 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://bpv1mlbwxqjy7" path="res://assets/ezgif-69207c7da74dcd9e.png" id="2_sp1hu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp1hu"]
+size = Vector2(14, 29)
 
 [node name="Bug" type="CharacterBody2D"]
 script = ExtResource("1_f31lg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 1.5)
+scale = Vector2(1.5, 1)
 texture = ExtResource("2_sp1hu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_sp1hu")
