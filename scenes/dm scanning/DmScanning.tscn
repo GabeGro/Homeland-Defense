@@ -1,15 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc3t42jsqhvpn"]
+[gd_scene load_steps=9 format=3 uid="uid://cc3t42jsqhvpn"]
 
 [ext_resource type="Script" uid="uid://dswfhmgxjra8a" path="res://scripts/dm_scanning.gd" id="1_mqimm"]
 [ext_resource type="Texture2D" uid="uid://b7hhii6260ji4" path="res://assets/windows-bg.jpg" id="2_to3ka"]
 [ext_resource type="PackedScene" uid="uid://dkdrm4nc27s6t" path="res://scenes/dm scanning/DM1.tscn" id="2_xy5gx"]
 [ext_resource type="PackedScene" uid="uid://dlvuw2er386fu" path="res://scenes/dm scanning/DM2.tscn" id="3_hgr61"]
+[ext_resource type="PackedScene" uid="uid://bvwv02y6t4d1h" path="res://scenes/dm scanning/DM3.tscn" id="4_u115m"]
+[ext_resource type="PackedScene" uid="uid://b4dk0h34rt3tv" path="res://scenes/dm scanning/DM4.tscn" id="5_h26lu"]
 [ext_resource type="Texture2D" uid="uid://b4caf0j03ldl7" path="res://assets/crash-screen.png" id="5_to3ka"]
+[ext_resource type="PackedScene" uid="uid://dkwu0u6xvrorq" path="res://scenes/dm scanning/DM5.tscn" id="6_07qc7"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mqimm")
 dm1_scene = ExtResource("2_xy5gx")
 dm2_scene = ExtResource("3_hgr61")
+dm3_scene = ExtResource("4_u115m")
+dm4_scene = ExtResource("5_h26lu")
+dm5_scene = ExtResource("6_07qc7")
 
 [node name="windowsBG" type="Sprite2D" parent="."]
 position = Vector2(638.44446, 357.75)
