@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlvuw2er386fu"]
 
 [ext_resource type="Script" uid="uid://b2blc43yajmse" path="res://scripts/dm_2.gd" id="1_6xn65"]
-[ext_resource type="Texture2D" uid="uid://cb00i7m7v15p1" path="res://assets/check.png" id="2_hmvtg"]
-[ext_resource type="Texture2D" uid="uid://b0d5o1t4tt7ic" path="res://assets/cross.png" id="3_eflv5"]
+[ext_resource type="Texture2D" uid="uid://c6x00ae2xku6n" path="res://assets/clear-button.png" id="2_4nvvd"]
+[ext_resource type="Texture2D" uid="uid://dn2ms3pumrdr4" path="res://assets/flag-button.png" id="3_5v2lk"]
 [ext_resource type="Texture2D" uid="uid://5pybrfbogbd6" path="res://assets/DM2.png" id="4_6xn65"]
 
 [node name="Dm2" type="Node2D"]
@@ -14,7 +14,7 @@ offset_top = 24.0
 offset_right = 973.0
 offset_bottom = 524.0
 scale = Vector2(0.255, 0.255)
-texture_normal = ExtResource("2_hmvtg")
+texture_normal = ExtResource("2_4nvvd")
 stretch_mode = 0
 
 [node name="No Button" type="TextureButton" parent="."]
@@ -23,7 +23,7 @@ offset_top = 232.00002
 offset_right = 1372.0
 offset_bottom = 1132.0
 scale = Vector2(0.142, 0.142)
-texture_normal = ExtResource("3_eflv5")
+texture_normal = ExtResource("3_5v2lk")
 stretch_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

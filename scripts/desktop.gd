@@ -16,7 +16,7 @@ func _ready() -> void:
 	add_child(popup)
 
 	# Turn on ads only now that we're in the Desktop
-	popup.ads_enabled = true
+	PopUp.ads_enabled = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

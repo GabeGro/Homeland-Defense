@@ -13,6 +13,14 @@
 z_index = 1
 script = ExtResource("1_rostw")
 
+[node name="crashScreen" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+z_index = 2
+position = Vector2(579.0851, 328.0625)
+scale = Vector2(1.1855407, 1.2182871)
+texture = ExtResource("4_q4bxk")
+
 [node name="windowsBG" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(575.3334, 322.25)
@@ -21,13 +29,6 @@ texture = ExtResource("2_pjxvf")
 
 [node name="ClankerAd" parent="." instance=ExtResource("3_h664c")]
 position = Vector2(-142.99994, 222.00002)
-
-[node name="crashScreen" type="Sprite2D" parent="."]
-visible = false
-z_index = 2
-position = Vector2(577.76556, 325.50003)
-scale = Vector2(1.2066007, 1.2129629)
-texture = ExtResource("4_q4bxk")
 
 [node name="BrainAd" parent="." instance=ExtResource("5_o2007")]
 position = Vector2(-140, 631)

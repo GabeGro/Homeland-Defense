@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc3t42jsqhvpn"]
+[gd_scene load_steps=10 format=3 uid="uid://cc3t42jsqhvpn"]
 
 [ext_resource type="Script" uid="uid://dswfhmgxjra8a" path="res://scripts/dm_scanning.gd" id="1_mqimm"]
 [ext_resource type="Texture2D" uid="uid://b7hhii6260ji4" path="res://assets/windows-bg.jpg" id="2_to3ka"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4dk0h34rt3tv" path="res://scenes/dm scanning/DM4.tscn" id="5_h26lu"]
 [ext_resource type="Texture2D" uid="uid://b4caf0j03ldl7" path="res://assets/crash-screen.png" id="5_to3ka"]
 [ext_resource type="PackedScene" uid="uid://dkwu0u6xvrorq" path="res://scenes/dm scanning/DM5.tscn" id="6_07qc7"]
+[ext_resource type="Texture2D" uid="uid://dffjte4i2f1j7" path="res://assets/dm-win-screen.png" id="7_h26lu"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mqimm")
@@ -17,14 +18,29 @@ dm3_scene = ExtResource("4_u115m")
 dm4_scene = ExtResource("5_h26lu")
 dm5_scene = ExtResource("6_07qc7")
 
-[node name="windowsBG" type="Sprite2D" parent="."]
-position = Vector2(638.44446, 357.75)
-scale = Vector2(0.33356476, 0.3335648)
+[node name="WinScreen" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(577.75, 329.5)
+scale = Vector2(0.81263083, 0.82009923)
+texture = ExtResource("7_h26lu")
+
+[node name="WindowsBg" type="Sprite2D" parent="."]
+position = Vector2(577.466, 325.75)
+scale = Vector2(0.30184066, 0.30115744)
 texture = ExtResource("2_to3ka")
 
 [node name="crashScreen" type="Sprite2D" parent="."]
 visible = false
 top_level = true
-position = Vector2(642.0851, 363.5625)
-scale = Vector2(1.3141122, 1.3497685)
+position = Vector2(692.58514, 391.06256)
+scale = Vector2(1.4171735, 1.4516206)
 texture = ExtResource("5_to3ka")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 932.0
+offset_top = 15.0
+offset_right = 1142.0
+offset_bottom = 80.0
+text = "Objective: 
+Flag suspicious messages"

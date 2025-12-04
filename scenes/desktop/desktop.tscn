@@ -15,40 +15,48 @@
 script = ExtResource("1_06q4v")
 
 [node name="WindowsBg" type="Sprite2D" parent="."]
-position = Vector2(579.1792, 320.5)
-scale = Vector2(0.30524382, 0.3115741)
+position = Vector2(577.466, 325.75)
+scale = Vector2(0.30184066, 0.30115744)
 texture = ExtResource("1_rmtxi")
 
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 949.0
+offset_top = 15.0
+offset_right = 1142.0
+offset_bottom = 84.0
+text = "Objective: 
+Locate encrypted data"
+
 [node name="SecretsButton" type="TextureButton" parent="."]
-offset_left = 44.0
-offset_top = 509.0
-offset_right = 142.0
-offset_bottom = 624.6493
+offset_left = 39.0
+offset_top = 506.0
+offset_right = 137.0
+offset_bottom = 621.6493
 texture_normal = ExtResource("3_06q4v")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="GamesButton" type="TextureButton" parent="."]
-offset_left = 46.0
+offset_left = 40.0
 offset_top = 363.0
-offset_right = 144.0
+offset_right = 138.0
 offset_bottom = 478.6493
 texture_normal = ExtResource("4_46iw5")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="FinalButton" type="TextureButton" parent="."]
-offset_left = 38.0
-offset_top = 223.0
-offset_right = 150.0
-offset_bottom = 338.6493
+offset_left = 36.0
+offset_top = 227.0
+offset_right = 148.0
+offset_bottom = 342.6493
 texture_normal = ExtResource("5_hxdtg")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="SecretsFolder" parent="." instance=ExtResource("3_13veq")]
 visible = false
-position = Vector2(578, 305)
+position = Vector2(578, 353.00003)
 scale = Vector2(0.5253469, 0.5253469)
 
 [node name="GamesFolder" parent="." instance=ExtResource("7_anrqh")]
@@ -58,7 +66,7 @@ scale = Vector2(0.52134466, 0.5213447)
 
 [node name="FinalFolder" parent="." instance=ExtResource("8_bj3ii")]
 visible = false
-position = Vector2(640, 366)
+position = Vector2(666, 315)
 scale = Vector2(0.52134466, 0.5213447)
 
 [node name="SecretNotepad" parent="." instance=ExtResource("9_bj3ii")]

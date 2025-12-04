@@ -19,7 +19,7 @@ func _show_next_dm() -> void:
 	# Finished all DMs, go to win/lose
 	if dm_index > 5:
 		if correct == 5:
-			get_tree().change_scene_to_file("res://scenes/WinScreen.tscn")
+			$WinScreen.visible = true
 		else:
 			get_tree().change_scene_to_file("res://scenes/LoseScreen.tscn")
 		return

@@ -50,6 +50,7 @@ modulate = Color(1, 1, 1, 0.3372549)
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_tefeu")
+metadata/_edit_use_anchors_ = true
 
 [node name="Bug" parent="." instance=ExtResource("1_o5qli")]
 z_index = 10
@@ -210,6 +211,12 @@ offset_bottom = 10.0
 color = Color(0.94509804, 0, 0.14901961, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="TileMap" type="TileMap" parent="Barrier3/Bar3visual"]
+format = 2
+
+[node name="TileMap" type="TileMap" parent="Barrier3/Bar3visual/TileMap"]
+format = 2
+
 [node name="Bar3Hole" type="ColorRect" parent="Barrier3"]
 offset_left = -500.0
 offset_top = -10.0
@@ -217,6 +224,17 @@ offset_right = -460.0
 offset_bottom = 10.0
 color = Color(0.20392157, 0.20392157, 0.26666668, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 949.0
+offset_top = 15.0
+offset_right = 1142.0
+offset_bottom = 84.0
+text = "Objective: 
+Break through firewall"
 
 [connection signal="body_entered" from="Enemy" to="." method="_on_enemy_body_entered"]
 [connection signal="body_entered" from="Enemy2" to="." method="_on_enemy_body_entered"]
