@@ -99,6 +99,7 @@ func _on_goal_area_body_entered(body: Node) -> void:
 
 	if _bug_is_inside_hole(GoalHoleVisual):
 		print("You squeezed through the hole! WIN")
+		PopUp.ads_enabled = true
 		get_tree().call_deferred(
 			"change_scene_to_file",
 			"res://scenes/WinScreen.tscn"
