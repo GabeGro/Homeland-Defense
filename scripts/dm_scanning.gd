@@ -45,22 +45,22 @@ func _show_next_dm() -> void:
 	add_child(current_dm)
 
 func _on_dm_yes() -> void:
-	# Correct pattern: 1=yes, 2=no, 3=yes, 4=no, 5=yes
+	# Correct pattern: 1=no, 2=no, 3=yes, 4=no, 5=yes
 	match dm_index:
-		1, 3, 5:
+		3, 5:
 			correct += 1
-		2, 4:
+		1, 2, 4:
 			# these should have been "no", so don't increment
 			pass
 
 	_show_next_dm()
 
 func _on_dm_no() -> void:
-	# Correct pattern: 1=yes, 2=no, 3=yes, 4=no, 5=yes
+	# Correct pattern: 1=no, 2=no, 3=yes, 4=no, 5=yes
 	match dm_index:
-		2, 4:
+		1, 2, 4:
 			correct += 1
-		1, 3, 5:
+		3, 5:
 			# these should have been "yes", so don't increment
 			pass
 

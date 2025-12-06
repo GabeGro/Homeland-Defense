@@ -21,9 +21,9 @@ PopUp="*res://scenes/desktop/PopUp.tscn"
 
 [display]
 
-window/size/viewport_width=2304
-window/size/viewport_height=1296
-window/stretch/scale=2.0
+window/size/viewport_width=1140
+window/size/viewport_height=668
+window/stretch/mode="canvas_items"
 
 [input]
 

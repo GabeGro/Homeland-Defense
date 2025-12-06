@@ -101,7 +101,7 @@ func _on_goal_area_body_entered(body: Node) -> void:
 		print("You squeezed through the hole! WIN")
 		get_tree().call_deferred(
 			"change_scene_to_file",
-			"res://scenes/WinScreen.tscn"
+			"res://scenes/winscreen.tscn"
 		)
 	else:
 		print("Hit solid firewall, reset.")

@@ -24,8 +24,12 @@ offset_left = 949.0
 offset_top = 15.0
 offset_right = 1142.0
 offset_bottom = 84.0
+mouse_filter = 2
 text = "Objective: 
 Locate encrypted data"
+editable = false
+context_menu_enabled = false
+selecting_enabled = false
 
 [node name="SecretsButton" type="TextureButton" parent="."]
 offset_left = 39.0

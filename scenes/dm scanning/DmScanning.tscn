@@ -40,7 +40,13 @@ texture = ExtResource("5_to3ka")
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 932.0
 offset_top = 15.0
-offset_right = 1142.0
-offset_bottom = 80.0
+offset_right = 1146.0
+offset_bottom = 186.0
+mouse_filter = 2
 text = "Objective: 
-Flag suspicious messages"
+Flag suspicious messages
+make sure to move the dm screen so you dont accidently click clear or flag when closing ads"
+editable = false
+context_menu_enabled = false
+selecting_enabled = false
+wrap_mode = 1
